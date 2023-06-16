@@ -1,5 +1,21 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+index:
+   path: /
+   controller: App\Controller\MainController::index
+
+getUsers:
+   path: /users
+   controller: App\Controller\UserController::getUsers
+
+
+createUser:
+  path: /user/create
+  controller: App\Controller\UserController::createUser
+
+
+updateUser:
+  path: /user/update/{id}
+  controller: App\Controller\UserController::updateUser
+
+deleteUser:
+  path: /user/delete/{id}
+  controller: App\Controller\UserController::deleteUser
